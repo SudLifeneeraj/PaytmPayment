@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WIP_Report.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WIP_Report_FeedbackWebservice_Feedback" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://10.1.8.253/SUD_FeedbackService/Feedback.svc</Value>
+    </Setting>
+    <Setting Name="WIP_Report_Omni_doc_upload_WebservicemainService_DocUpload" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://DC-OMNIDEV-01:8080/WebserviceDocumentUpload_PS/WebservicemainService_DocUpload</Value>
+    </Setting>
+    <Setting Name="WIP_Report_GetLoginUser_PolicyDetails_WebService_GetallPolicydetails" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://10.1.20.151/GetallPolicyDetailsInformation_BankPortal/WebService_GetallPolicydetails.asmx</Value>
+    </Setting>
+    <Setting Name="WIP_Report_SendingMailSoapClientNew_SendMail2User_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.20.150/SendMail2User_WebService/SendMail2User_Service.asmx</Value>
+    </Setting>
+    <Setting Name="WIP_Report_PremiumRecieptNew_BizTalkServiceInstance" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dc-biztlkpr-01.sud.in/BOsTesting/BOsTesting_Orchestration_1_PremiumPaymentRequest.svc</Value>
+    </Setting>
+    <Setting Name="WIP_Report_ReinstatementReciept_BizTalkServiceInstance" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dc-biztlkpr-01.sud.in/BOsTesting/BOsTesting_Reinstatement_ReinstatementPort.svc</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

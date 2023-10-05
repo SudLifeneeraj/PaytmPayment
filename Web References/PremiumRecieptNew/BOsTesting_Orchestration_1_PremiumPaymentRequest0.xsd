@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://BOsTesting.PortalInputSchemaforFundSwitch" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://BOsTesting.PortalInputSchemaforFundSwitch" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="FundSwitchInput">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PolicyNumber" type="xs:string" />
+        <xs:element name="EffectiveDate" type="xs:string" />
+        <xs:element name="FromPercentageAmount1" type="xs:string" />
+        <xs:element name="FromFundName1" type="xs:string" />
+        <xs:element name="FromPercentageAmount2" type="xs:string" />
+        <xs:element name="FromFundName2" type="xs:string" />
+        <xs:element name="FromPercentageAmount3" type="xs:string" />
+        <xs:element name="FromFundName3" type="xs:string" />
+        <xs:element name="FromPercentageAmount4" type="xs:string" />
+        <xs:element name="FromFundName4" type="xs:string" />
+        <xs:element name="DesiredPercentageAmount1" type="xs:string" />
+        <xs:element name="DesiredFundName1" type="xs:string" />
+        <xs:element name="DesiredPercentageAmount2" type="xs:string" />
+        <xs:element name="DesiredFundName2" type="xs:string" />
+        <xs:element name="DesiredPercentageAmount3" type="xs:string" />
+        <xs:element name="DesiredFundName3" type="xs:string" />
+        <xs:element name="DesiredPercentageAmount4" type="xs:string" />
+        <xs:element name="DesiredFundName4" type="xs:string" />
+        <xs:element name="TransactionId" type="xs:string" />
+        <xs:element name="FundSwitchFlag" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

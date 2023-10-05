@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bc54e287-0326-45e8-a886-e7d08be8d7e9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.1.8.253/SUD_FeedbackService/Feedback.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Feedback.xsd" MetadataType="Schema" ID="fec2c62b-bdc6-4d2c-ab58-91050845cbdf" SourceId="1" SourceUrl="http://10.1.8.253/SUD_FeedbackService/Feedback.svc?xsd=xsd2" />
+    <MetadataFile FileName="Feedback1.xsd" MetadataType="Schema" ID="5e4d2c56-80e0-4d66-85d9-31c30f3b514a" SourceId="1" SourceUrl="http://10.1.8.253/SUD_FeedbackService/Feedback.svc?xsd=xsd1" />
+    <MetadataFile FileName="Feedback2.xsd" MetadataType="Schema" ID="d670c160-7998-4878-af2e-f1f027aa152b" SourceId="1" SourceUrl="http://10.1.8.253/SUD_FeedbackService/Feedback.svc?xsd=xsd0" />
+    <MetadataFile FileName="Feedback.wsdl" MetadataType="Wsdl" ID="3a63ac8a-6ef2-41b4-aeb9-9ac9b1fe4d69" SourceId="1" SourceUrl="http://10.1.8.253/SUD_FeedbackService/Feedback.svc?wsdl" />
+    <MetadataFile FileName="Feedback.disco" MetadataType="Disco" ID="4991e3be-61ea-42ab-b5d0-e03eb9df2c23" SourceId="1" SourceUrl="http://10.1.8.253/SUD_FeedbackService/Feedback.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

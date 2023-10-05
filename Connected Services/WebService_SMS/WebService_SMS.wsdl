@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://SMS.SMSInputSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s2="http://SMS.SMSOutputSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "SMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=27d1f5a5a2129a0f" published web service.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://SMS.SMSInputSchema" />
+      <s:import namespace="http://SMS.SMSOutputSchema" />
+      <s:element name="SMSRequestResponsePort">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:SMSInput" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMSRequestResponsePortResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s2:InsertSMSInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://SMS.SMSInputSchema">
+      <s:element name="SMSInput">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mobile_Number" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Flag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Received_From" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://SMS.SMSOutputSchema">
+      <s:element name="InsertSMSInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="InsertStatus">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Status" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SMSRequestResponsePortSoapIn">
+    <wsdl:part name="parameters" element="tns:SMSRequestResponsePort" />
+  </wsdl:message>
+  <wsdl:message name="SMSRequestResponsePortSoapOut">
+    <wsdl:part name="parameters" element="tns:SMSRequestResponsePortResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService_SMSSoap">
+    <wsdl:operation name="SMSRequestResponsePort">
+      <wsdl:input message="tns:SMSRequestResponsePortSoapIn" />
+      <wsdl:output message="tns:SMSRequestResponsePortSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService_SMSSoap" type="tns:WebService_SMSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SMSRequestResponsePort">
+      <soap:operation soapAction="http://tempuri.org/WebService_SMS/SMSRequestResponsePort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_SMSSoap12" type="tns:WebService_SMSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SMSRequestResponsePort">
+      <soap12:operation soapAction="http://tempuri.org/WebService_SMS/SMSRequestResponsePort" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService_SMS">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "SMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=27d1f5a5a2129a0f" published web service.</wsdl:documentation>
+    <wsdl:port name="WebService_SMSSoap" binding="tns:WebService_SMSSoap">
+      <soap:address location="http://10.1.20.151/SMSInformation/WebService_SMS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService_SMSSoap12" binding="tns:WebService_SMSSoap12">
+      <soap12:address location="http://10.1.20.151/SMSInformation/WebService_SMS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

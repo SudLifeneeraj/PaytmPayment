@@ -1,0 +1,253 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WIP_Report.Models
+{
+    public class Input
+    {
+        public string RequestId { get; set; }
+        public string InwardDate { get; set; }
+        public string ActivityType { get; set; }
+        public string LineofBusiness { get; set; }
+        public string Product { get; set; }
+        public string ApplicationNo { get; set; }
+        public string BankBrCode { get; set; }
+       
+       // Channel Details 
+        
+        public string ChannelType { get; set; }
+        public string CABrokerCode  { get; set; }
+        public string CABrokerName  { get; set; }
+        public string SalesCode_MO_SP_Advisorode { get; set; }
+        public string CO_FOScode_PFNoofemployee { get; set; }
+        public string StaffCase { get; set; }
+        public string EmployeeIDPFnumber { get; set; }
+        
+     
+        // Details of Main Applicant 
+        public string BorrowerType  { get; set; }
+        public string FullName  { get; set; }
+        public string DateofBirth { get; set; }
+        public string Gender { get; set; }
+        public string ContactNo { get; set; }
+        public string Nationality { get; set; }
+        public string IfOther  { get; set; }
+        public string ResidentStatus  { get; set; }
+        public string TINNo { get; set; }
+        public string AgeProof  { get; set; }
+        public string Occupation { get; set; }
+        public string PANCardNo  { get; set; }
+        public string AadharcardNo { get; set; }
+        public string FlatnoAddress1 { get; set; }
+        public string BldgNameAddress2 { get; set; }
+        public string RoadNameNoAddress3 { get; set; }
+        public string CityAddress4 { get; set; }
+        public string State { get; set; }
+        public string Pin { get; set; }
+        public string Country { get; set; }
+        public string EmailID { get; set; }
+     //   public string ProposalDate  { get; set; }                   // not val
+        public string MainApplicantSignedDate { get; set; }                       //addi
+
+
+        //Details of Co-applicant 
+
+        public class DetailsofCoapplicant
+        {
+           
+            public string FullName { get; set; }
+            public string DateofBirth { get; set; }
+            public string Gender { get; set; }
+            public string ContactNo { get; set; }
+            public string Nationality { get; set; }
+            public string IfOther { get; set; }
+            public string ResidentStatus { get; set; }
+            public string TINNo { get; set; }
+            public string AgeProof { get; set; }
+            public string Occupation { get; set; }
+            public string PANCardNo { get; set; }
+            public string AadharcardNo { get; set; }
+            public string FlatnoAddress1 { get; set; }
+            public string BldgNameAddress2 { get; set; }
+            public string RoadNameNoAddress3 { get; set; }
+            public string CityAddress4 { get; set; }
+            public string State { get; set; }
+            public string Pin { get; set; }
+            public string Country { get; set; }
+            public string EmailID { get; set; }
+            public string CoApplicantSignedDate { get; set; }
+            public string Relationtomainapplicant { get; set; }
+
+
+        }
+
+       
+
+
+       // Insurance Details / Loan Details 
+        public string LoanAmountExcludingpremium { get; set; }
+        public string LoanAccountNumber { get; set; }
+        public string LoanType  { get; set; }
+        public string OthersPleaseSpecify  { get; set; }
+        public string JointLifeOptions { get; set; }
+        public string ShareOfMainApplicant { get; set; }
+        public string ShareofCoapplicant { get; set; }
+        public string PlaceofStudyCountry  { get; set; }
+        public string RateofLoanInterest { get; set; }
+        public string StudyPeriodinYrs { get; set; }
+        public string MoratoriumPeriodinMonths { get; set; }
+        public string RepaymentPeriodinYrs { get; set; }
+        public string MoratoriumOption  { get; set; }
+        public string PremiumPaymentMode  { get; set; }
+        public string PremiumPaymentTermYear { get; set; }
+        public string AutoRenewal { get; set; }
+        public string PolicyTermYear { get; set; }
+        public string PremiumFunding  { get; set; }
+        public string PremiumAmountAsperapplicationForm { get; set; }
+        public string PremiumAmountSalesIllustration { get; set; }
+        public string PremiumAmountAsperPaySLIP { get; set; }
+        public string LoanSanctionDate { get; set; }
+        public string InitialSumAssured { get; set; }
+        public string ACNo  { get; set; }
+        public string IFSCCode { get; set; }
+       
+        
+        //Reconcilation Details 
+        public string MultipleProposal  { get; set; }
+        public string MultiProposalApplicationNo { get; set; }
+        public string TypeOftransaction { get; set; }
+        public string TransactionType { get; set; }
+        public string TransactionID { get; set; }
+        public string TransactionDate { get; set; }
+        public string TransactionAmount  { get; set; }
+        public string BranchCode  { get; set; }
+        public string SourceApplicationno { get; set; }
+        public string Remark { get; set; }                                      //addi
+
+
+        //Nominee Details 
+        public class NomineeDetails
+        {
+
+            public string FirstName { get; set; }
+            public string Gender { get; set; }
+            public string DateofBirth { get; set; }
+            public string ContactNo { get; set; }
+            public string RelationshipwithLifeAssured { get; set; }
+            public string PercentageofShare { get; set; }
+
+        }
+
+        //Appointee details(mandatory if nominee is minor)
+        public class Appointeedetails
+        {
+            public string FullName  { get; set; }
+            public string Gender { get; set; }
+            public string DateofBirth { get; set; }
+            public string ContactNo { get; set; }
+            public string RelationshipwithNominee  { get; set; }
+          
+
+        }
+
+
+        //For Cases With Sum Assured Above 2 Crore (Main Applicant)
+        public string AnnualIncome { get; set; }
+        public string IfSalariedNameofEmployer { get; set; }
+        public string IfSalariedDesignation { get; set; }
+        public string IfBusinessTypeofFirm { get; set; }
+        public string Others { get; set; }
+        public string Profession { get; set; }
+
+        //For Cases With Sum Assured Above 2 Crore (Co-applicant)
+        public class SumAssuredCoapplicant
+        {
+            public string AnnualIncome { get; set; }
+            public string IfSalariedNameofEmployer { get; set; }
+            public string IfSalariedDesignation { get; set; }
+            public string IfBusinessTypeofFirm { get; set; }
+            public string Others { get; set; }
+            public string Profession { get; set; }
+
+        }
+
+
+       
+      
+        //Health Details of Life Assured-Main Applicant
+        public string MAIN_APP_ANS1 { get; set; }
+        public string MAIN_APP_ANS2 { get; set; }
+        public string MAIN_APP_ANS3 { get; set; }
+        public string MAIN_APP_ANS4 { get; set; }
+        public string MAIN_APP_ANS5 { get; set; }
+        public string MAIN_APP_ANS6 { get; set; }
+        public string MAIN_APP_ANS7 { get; set; }
+        public string MAIN_APP_ANS8 { get; set; }
+        public string MAIN_APP_ANS9 { get; set; }
+        public string MAIN_APP_ANS10 { get; set; }
+        public string MAIN_APP_ANS11 { get; set; }
+        public string MAIN_APP_ANS12 { get; set; }
+        public string MAIN_APP_ANS13 { get; set; }
+        public string MAIN_APP_ANS14 { get; set; }
+        public string MAIN_APP_ANS15 { get; set; }
+        public string MAIN_APP_ANS16 { get; set; }
+        public string MAIN_APP_ANS17 { get; set; }
+        public string MAIN_APP_ANS18 { get; set; }
+        public string MAIN_APP_ANS19 { get; set; }
+        public string MAIN_APP_ANS20 { get; set; }
+        public string MAIN_APP_ANS21 { get; set; }
+        public string MAIN_APP_ANS22 { get; set; }
+        public string MAIN_APP_ANS23 { get; set; }
+        public string MAIN_APP_ANS24 { get; set; }
+
+        public string CrDate { get; set; }
+
+        //Health Details of Life Assured-Co Applicant
+        public class LifeAssuredCoApplicant
+        {
+
+          
+         
+
+            public string CO_APP_ANS1 { get; set; }
+            public string CO_APP_ANS2 { get; set; }
+            public string CO_APP_ANS3 { get; set; }
+            public string CO_APP_ANS4 { get; set; }
+            public string CO_APP_ANS5 { get; set; }
+            public string CO_APP_ANS6 { get; set; }
+            public string CO_APP_ANS7 { get; set; }
+            public string CO_APP_ANS8 { get; set; }
+            public string CO_APP_ANS9 { get; set; }
+            public string CO_APP_ANS10 { get; set; }
+            public string CO_APP_ANS11 { get; set; }
+            public string CO_APP_ANS12 { get; set; }
+            public string CO_APP_ANS13 { get; set; }
+            public string CO_APP_ANS14 { get; set; }
+            public string CO_APP_ANS15 { get; set; }
+            public string CO_APP_ANS16 { get; set; }
+            public string CO_APP_ANS17 { get; set; }
+            public string CO_APP_ANS18 { get; set; }
+            public string CO_APP_ANS19 { get; set; }
+            public string CO_APP_ANS20 { get; set; }
+            public string CO_APP_ANS21 { get; set; }
+            public string CO_APP_ANS22 { get; set; }
+            public string CO_APP_ANS23 { get; set; }
+            public string CO_APP_ANS24 { get; set; }
+
+        }
+
+
+
+        public List<DetailsofCoapplicant> DetailsofCoapplicant { get; set; }
+        public List<NomineeDetails> NomineeDetails { get; set; }
+        public List<Appointeedetails> Appointeedetails { get; set; }
+        public List<LifeAssuredCoApplicant> LifeAssuredCoApplicant { get; set; }
+        public List<SumAssuredCoapplicant> SumAssuredCoapplicant { get; set; }
+       
+    }
+
+    
+   
+}

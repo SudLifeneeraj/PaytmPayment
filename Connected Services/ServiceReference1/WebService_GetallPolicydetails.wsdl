@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s11="http://Daiichi.RiderDetailsOutput" xmlns:s16="http://Daiichi.LoginOutput" xmlns:s17="http://Daiichi.MyAgentOutput" xmlns:s8="http://Daiichi.PolicyPayoutdetailsinput" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s6="http://Daiichi.MyAgent" xmlns:s13="http://Daiichi.MyPolicyOutput" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s14="http://Daiichi.MyFundOutput" xmlns:s15="http://Daiichi.Fault" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s1="http://GetAllPolicyDetailsInput" xmlns:s3="http://Daiichi.MyPolicy" xmlns:s4="http://Daiichi.Login" xmlns:s12="http://GetallPolicydetails.MyNomineeOutput" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s9="http://GetallPolicydetails.MyNomineeInput" xmlns:s7="http://Daiichi.RiderDetails" xmlns:s10="http://GetAllPolicyDetailsOutput" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s2="http://Daiichi.MyFund" xmlns:s18="http://Daiichi.MyAddressOutput" xmlns:s19="http://Daiichi.PolicyPayoutdetailsoutput" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s5="http://Daiichi.MyAddress" xmlns:tns="http://tempuri.org/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "GetallPolicydetails, Version=1.0.0.0, Culture=neutral, PublicKeyToken=20c44cbf9714baf2" published web service.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://GetAllPolicyDetailsInput" />
+      <s:import namespace="http://GetAllPolicyDetailsOutput" />
+      <s:element name="Operation_1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:RetriveServiceInput" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Operation_1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s10:RetriveServiceOutput" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://GetAllPolicyDetailsInput">
+      <s:import namespace="http://Daiichi.MyFund" />
+      <s:import namespace="http://Daiichi.MyPolicy" />
+      <s:import namespace="http://Daiichi.Login" />
+      <s:import namespace="http://Daiichi.MyAddress" />
+      <s:import namespace="http://Daiichi.MyAgent" />
+      <s:import namespace="http://Daiichi.RiderDetails" />
+      <s:import namespace="http://Daiichi.PolicyPayoutdetailsinput" />
+      <s:import namespace="http://GetallPolicydetails.MyNomineeInput" />
+      <s:element name="RetriveServiceInput">
+        <s:complexType>
+          <s:sequence>
+            <s:choice minOccurs="1" maxOccurs="1">
+              <s:element minOccurs="0" maxOccurs="1" ref="s2:MyFund" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s3:MyPolicy" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s4:Logininput" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s5:MyAddressinput" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s6:MyAgent" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s7:RiderDetails" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s8:PolicyPayoutDetails" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s9:MyNominee" />
+            </s:choice>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Daiichi.MyFund">
+      <s:element name="MyFund">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="PolicyNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="MyFundDetails" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Daiichi.MyPolicy">
+      <s:element name="MyPolicy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="ClientID" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="GetPolicyDetails" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Policy_Number" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Daiichi.Login">
+      <s:element name="Logininput">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="ClientID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="GetPolicyFundDetails" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Daiichi.MyAddress">
+      <s:element name="MyAddressinput">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="ClientID" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="GetClientDetails" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Policy_Number" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Daiichi.MyAgent">
+      <s:element name="MyAgent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="ClientID" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="GetAgentDetails" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyNumber" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Daiichi.RiderDetails">
+      <s:element name="RiderDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="ClientID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="GetRiderDetails" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Daiichi.PolicyPayoutdetailsinput">
+      <s:element name="PolicyPayoutDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="ClientID" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="GetPayoutDetails" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Policy_Number" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://GetallPolicydetails.MyNomineeInput">
+      <s:element name="MyNominee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="ClientId" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyNumber" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="GetNomineeDetails" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://GetAllPolicyDetailsOutput">
+      <s:import namespace="http://Daiichi.RiderDetailsOutput" />
+      <s:import namespace="http://GetallPolicydetails.MyNomineeOutput" />
+      <s:import namespace="http://Daiichi.MyPolicyOutput" />
+      <s:import namespace="http://Daiichi.MyFundOutput" />
+      <s:import namespace="http://Daiichi.Fault" />
+      <s:import namespace="http://Daiichi.LoginOutput" />
+      <s:import namespace="http://Daiichi.MyAgentOutput" />
+      <s:import namespace="http://Daiichi.MyAddressOutput" />
+      <s:import namespace="http://Daiichi.PolicyPayoutdetailsoutput" />
+      <s:element name="RetriveServiceOutput">
+        <s:complexType>
+          <s:sequence>
+            <s:choice minOccurs="0" maxOccurs="unbounded">
+              <s:element minOccurs="0" maxOccurs="1" ref="s11:RiderDetailsOutput" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s12:MyNomineeOutput" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s13:MyPolicyOutput" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s14:MyFundOutput" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s15:Fault" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s16:LoginOutput" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s17:MyAgentOutput" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s18:MyAddressOutput" />
+              <s:element minOccurs="0" maxOccurs="1" ref="s19:PolicyPayoutdetailsOutput" />
+            </s:choice>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Daiichi.RiderDetailsOutput">
+      <s:element name="RiderDetailsOutput">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="ExistingModalPremium" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PremiumAmount" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyNumber" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Rider" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://GetallPolicydetails.MyNomineeOutput">
+      <s:element name="MyNomineeOutput">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Policy_Number" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Client_ID" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Customer_Name" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Beneficiary_Relationship" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="DOB" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Gender" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Daiichi.MyPolicyOutput">
+      <s:element name="MyPolicyOutput">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyNumber" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyHolderName" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PremiumAmount" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="SumAssured" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="ProductName" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyTerm" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="NextPremiumDueDate" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="LastPremiumpaiddate" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyCommencementDate" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyStatus" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="DateofMaturity" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyProductCode" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyProductCategory" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="TotalPolicyValue" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Existing_Mode" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Premium_Cess_Term" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Premium_Status" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Daiichi.MyFundOutput">
+      <s:element name="MyFundOutput">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="FundName" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="NAV" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Numberofunits" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fundvalue" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Currentapportionment" nillable="true" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Fund_Short_Name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Daiichi.Fault">
+      <s:element name="Fault">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Errormsg" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Daiichi.LoginOutput">
+      <s:element name="LoginOutput">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyNumber" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyHolderName" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PremiumAmount" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="SumAssured" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="ProductName" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyTerm" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="NextPremiumDueDate" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="LastPremiumpaiddate" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyCommencementDate" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyStatus" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="DateofMaturity" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyProductCode" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyProductCategory" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="TotalPolicyValue" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="FundName" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="NAV" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Numberofunits" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fundvalue" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Currentapportionment" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Existing_Mode" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Premium_Cess_Term" nillable="true" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Fund_Short_Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Client_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Daiichi.MyAgentOutput">
+      <s:element name="MyAgentOutput">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyNumber" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Customer_Name" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Phone1" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Phone2" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Mobile_No" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Mail_Id" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Daiichi.MyAddressOutput">
+      <s:element name="MyAddressOutput">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Salutation" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="CustomerName" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="DOB" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Gender" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Street" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Line1" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Line2" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Line3" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="State" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="City" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PIN" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Country" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Business" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Mailid" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Phone1" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Phone2" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="MobileNo" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Marital_Status" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Daiichi.PolicyPayoutdetailsoutput">
+      <s:element name="PolicyPayoutdetailsOutput">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyNumber" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyLapseDate" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="SurrenderValue" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="PolicyTerm" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Operation_1SoapIn">
+    <wsdl:part name="parameters" element="tns:Operation_1" />
+  </wsdl:message>
+  <wsdl:message name="Operation_1SoapOut">
+    <wsdl:part name="parameters" element="tns:Operation_1Response" />
+  </wsdl:message>
+  <wsdl:portType name="WebService_GetallPolicydetailsSoap">
+    <wsdl:operation name="Operation_1">
+      <wsdl:input message="tns:Operation_1SoapIn" />
+      <wsdl:output message="tns:Operation_1SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService_GetallPolicydetailsSoap" type="tns:WebService_GetallPolicydetailsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Operation_1">
+      <soap:operation soapAction="http://tempuri.org/WebService_GetallPolicydetails/Operation_1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_GetallPolicydetailsSoap12" type="tns:WebService_GetallPolicydetailsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Operation_1">
+      <soap12:operation soapAction="http://tempuri.org/WebService_GetallPolicydetails/Operation_1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService_GetallPolicydetails">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "GetallPolicydetails, Version=1.0.0.0, Culture=neutral, PublicKeyToken=20c44cbf9714baf2" published web service.</wsdl:documentation>
+    <wsdl:port name="WebService_GetallPolicydetailsSoap" binding="tns:WebService_GetallPolicydetailsSoap">
+      <soap:address location="http://10.1.35.22/GetallPolicyDetailsInformation_BankPortal/WebService_GetallPolicydetails.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService_GetallPolicydetailsSoap12" binding="tns:WebService_GetallPolicydetailsSoap12">
+      <soap12:address location="http://10.1.35.22/GetallPolicyDetailsInformation_BankPortal/WebService_GetallPolicydetails.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://dc-biztlkpr-01.sud.in/BOsTesting/BOsTesting_Reinstatement_ReinstatementPort.svc?xsd=xsd2" filename="BOsTesting_Reinstatement_ReinstatementPort.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://appcnct.sudlife.in/BOsTesting/BOsTesting_Reinstatement_ReinstatementPort.svc?wsdl" filename="BizTalkServiceInstance.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

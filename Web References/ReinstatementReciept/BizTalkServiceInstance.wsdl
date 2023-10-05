@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BizTalkServiceInstance" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <CreationInfo Created="2023-10-05 08:48:56Z" />
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://dc-biztlkpr-01.sud.in:80/BOsTesting/BOsTesting_Reinstatement_ReinstatementPort.svc?xsd=xsd2" namespace="http://BOsTesting.PortalInputSchemaforReinstatement" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="BOsTesting_Reinstatement_ReinstatementPort_ReinstatementRequestandResponse_InputMessage">
+    <wsdl:part xmlns:q1="http://BOsTesting.PortalInputSchemaforReinstatement" name="part" element="q1:Reinstatement" />
+  </wsdl:message>
+  <wsdl:message name="BOsTesting_Reinstatement_ReinstatementPort_ReinstatementRequestandResponse_OutputMessage" />
+  <wsdl:portType name="BOsTesting_Reinstatement_ReinstatementPort">
+    <wsdl:documentation>service "BOsTesting.Reinstatement" port "ReinstatementPort"</wsdl:documentation>
+    <wsdl:operation name="ReinstatementRequestandResponse">
+      <wsdl:documentation>operation "ReinstatementRequestandResponse"</wsdl:documentation>
+      <wsdl:input message="tns:BOsTesting_Reinstatement_ReinstatementPort_ReinstatementRequestandResponse_InputMessage" />
+      <wsdl:output message="tns:BOsTesting_Reinstatement_ReinstatementPort_ReinstatementRequestandResponse_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITwoWayAsyncVoid" type="tns:BOsTesting_Reinstatement_ReinstatementPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReinstatementRequestandResponse">
+      <wsdl:documentation>operation "ReinstatementRequestandResponse"</wsdl:documentation>
+      <soap:operation soapAction="ReinstatementRequestandResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BizTalkServiceInstance">
+    <wsdl:port name="BasicHttpBinding_ITwoWayAsyncVoid" binding="tns:BasicHttpBinding_ITwoWayAsyncVoid">
+      <soap:address location="http://dc-biztlkpr-01.sud.in/BOsTesting/BOsTesting_Reinstatement_ReinstatementPort.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

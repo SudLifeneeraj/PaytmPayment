@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1b61595c-ab67-449b-bb0a-c25dc363ec73" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.29/OTPServices/OTP.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OTP.disco" MetadataType="Disco" ID="707da42c-6461-438f-8ece-a022d7345804" SourceId="1" SourceUrl="http://192.168.1.29/OTPServices/OTP.svc?disco" />
+    <MetadataFile FileName="OTP.xsd" MetadataType="Schema" ID="95a015cb-b1a8-4e3d-b568-3e8be2714630" SourceId="1" SourceUrl="http://192.168.1.29/OTPServices/OTP.svc?xsd=xsd1" />
+    <MetadataFile FileName="OTP1.xsd" MetadataType="Schema" ID="0b45793e-5dbf-419e-8a91-65f5dd85d2b9" SourceId="1" SourceUrl="http://192.168.1.29/OTPServices/OTP.svc?xsd=xsd0" />
+    <MetadataFile FileName="OTP.wsdl" MetadataType="Wsdl" ID="e7269e09-a6e8-487c-834e-fe79b9d85507" SourceId="1" SourceUrl="http://192.168.1.29/OTPServices/OTP.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

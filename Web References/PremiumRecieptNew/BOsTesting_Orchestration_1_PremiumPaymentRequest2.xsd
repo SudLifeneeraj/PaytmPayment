@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://BOsTesting.PortalInputSchemaforPremiumPayment" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://BOsTesting.PortalInputSchemaforPremiumPayment" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PremiumPaymentInput">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TransactionId" type="xs:string" />
+        <xs:element name="PolicyNumber" type="xs:string" />
+        <xs:element name="PremiumAmount" type="xs:string" />
+        <xs:element name="PaymentGatewayResult" nillable="true" type="xs:string" />
+        <xs:element name="PremiumPaymentFlag" type="xs:string" />
+        <xs:element name="PayType" type="xs:string" />
+        <xs:element name="BGEN-SR289-DESCRN" type="xs:string" />
+        <xs:element name="BGEN-S2610-AGNTSEL" type="xs:string" />
+        <xs:element name="BGEN-S2610-REALDATE" type="xs:string" />
+        <xs:element name="BGEN-S2610-REALFLAG" type="xs:string" />
+        <xs:element name="BGEN-S2610-REALTIME" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

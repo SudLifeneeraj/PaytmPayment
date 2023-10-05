@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns4="http://BOsTesting.PropertySchema.PropertySchema" xmlns:ns2="http://BOsTesting.PortalInputSchemaforReinstatement" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:ns0="http://BOsTesting.PortalInputSchemaforFundSwitch" xmlns="http://PortalDay2.InputSchemafromPortal" xmlns:ns3="http://BOsTesting.PortalInputSchemaforReinstatementAmount" xmlns:ns1="http://BOsTesting.PortalInputSchemaforPremiumPayment" targetNamespace="http://PortalDay2.InputSchemafromPortal" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://dc-biztlkpr-01.sud.in:80/BOsTesting/BOsTesting_Orchestration_1_PremiumPaymentRequest.svc?xsd=xsd2" namespace="http://BOsTesting.PortalInputSchemaforPremiumPayment" />
+  <xs:import schemaLocation="http://dc-biztlkpr-01.sud.in:80/BOsTesting/BOsTesting_Orchestration_1_PremiumPaymentRequest.svc?xsd=xsd3" namespace="http://BOsTesting.PortalInputSchemaforReinstatementAmount" />
+  <xs:import schemaLocation="http://dc-biztlkpr-01.sud.in:80/BOsTesting/BOsTesting_Orchestration_1_PremiumPaymentRequest.svc?xsd=xsd4" namespace="http://BOsTesting.PortalInputSchemaforReinstatement" />
+  <xs:import schemaLocation="http://dc-biztlkpr-01.sud.in:80/BOsTesting/BOsTesting_Orchestration_1_PremiumPaymentRequest.svc?xsd=xsd5" namespace="http://BOsTesting.PortalInputSchemaforFundSwitch" />
+  <xs:annotation>
+    <xs:appinfo>
+      <b:references xmlns:b="http://schemas.microsoft.com/BizTalk/2003">
+        <b:reference targetNamespace="http://BOsTesting.PortalInputSchemaforFundSwitch" />
+        <b:reference targetNamespace="http://BOsTesting.PortalInputSchemaforReinstatement" />
+        <b:reference targetNamespace="http://BOsTesting.PortalInputSchemaforReinstatementAmount" />
+        <b:reference targetNamespace="http://BOsTesting.PortalInputSchemaforPremiumPayment" />
+      </b:references>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PortalInput">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="ns1:PremiumPaymentInput" />
+        <xs:element ref="ns3:ReinstatementAmount" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
